@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GEST — Simulateurs financiers gratuits</title>
+  <meta name="description" content="Simulez votre salaire, votre épargne, votre crédit, votre retraite et votre patrimoine en quelques secondes.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#accueil">GEST</a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+    <nav class="nav">
+      <a href="#simulateurs">Simulateurs</a>
+      <a href="#apropos">À propos</a>
+      <a href="#ressources">Ressources</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-copy">
+        <p class="eyebrow">GEST SIMULATEURS</p>
+        <h1>Tous vos simulateurs financiers <span>gratuits</span> au même endroit.</h1>
+        <p class="hero-text">
+          Simulez votre salaire, votre épargne, votre crédit, votre retraite
+          et votre patrimoine en quelques secondes.
+        </p>
+
+        <div class="trust-line" aria-label="Avantages">
+          <span>+ de 20 simulateurs</span>
+          <span>100 % gratuit</span>
+          <span>Sans inscription</span>
+        </div>
+
+        <a class="primary-btn" href="#simulateurs">Commencer une simulation</a>
+      </div>
+
+      <div class="hero-preview" aria-label="Aperçu de GEST">
+        <div class="device laptop">
+          <div class="screen">
+            <div class="screen-brand">GEST</div>
+            <div class="preview-card">
+              <small>Capital final estimé</small>
+              <strong>92 387 €</strong>
+              <div class="mini-chart"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="device phone">
+          <div class="screen">
+            <div class="screen-brand">GEST</div>
+            <p class="phone-title">Que souhaitez-vous calculer aujourd’hui ?</p>
+            <div class="phone-grid">
+              <span>Salaire</span>
+              <span>Épargne</span>
+              <span>Crédit</span>
+              <span>Intérêts</span>
+              <span>Retraite</span>
+              <span>Patrimoine</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="simulateurs">
+      <div class="section-heading">
+        <h2>Que souhaitez-vous calculer aujourd’hui ?</h2>
+      </div>
+
+      <div class="simulator-cards">
+        <a href="#salaire" class="sim-card">
+          <div class="icon">€</div>
+          <h3>Salaire brut → net</h3>
+          <p>Calculez votre salaire après cotisations et impôt.</p>
+          <span>Calculer →</span>
+        </a>
+
+        <a href="#interets" class="sim-card">
+          <div class="icon">↗</div>
+          <h3>Intérêts composés</h3>
+          <p>Projetez l’évolution de votre capital dans le temps.</p>
+          <span>Calculer →</span>
+        </a>
+
+        <a href="#epargne" class="sim-card">
+          <div class="icon">◉</div>
+          <h3>Épargne</h3>
+          <p>Mesurez votre capacité d’épargne mensuelle.</p>
+          <span>Calculer →</span>
+        </a>
+
+        <a href="#credit" class="sim-card">
+          <div class="icon">⌂</div>
+          <h3>Crédit</h3>
+          <p>Estimez vos mensualités et le coût du financement.</p>
+          <span>Calculer →</span>
+        </a>
+
+        <a href="#retraite" class="sim-card">
+          <div class="icon">◎</div>
+          <h3>Retraite</h3>
+          <p>Préparez vos revenus futurs simplement.</p>
+          <span>Calculer →</span>
+        </a>
+
+        <a href="#patrimoine" class="sim-card">
+          <div class="icon">◔</div>
+          <h3>Patrimoine</h3>
+          <p>Projetez votre patrimoine et vos objectifs.</p>
+          <span>Calculer →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><strong>100 % gratuit</strong><span>Aucun abonnement</span></div>
+      <div><strong>Sans inscription</strong><span>Aucune donnée stockée</span></div>
+      <div><strong>Résultats instantanés</strong><span>Calculs simples et rapides</span></div>
+      <div><strong>Fiable et objectif</strong><span>Méthodes transparentes</span></div>
+    </section>
+
+    <section class="section featured" id="interets">
+      <div class="featured-copy">
+        <p class="eyebrow">EN VEDETTE</p>
+        <h2>Simulateur d’intérêts composés</h2>
+        <p>Visualisez la puissance du temps et projetez votre capital selon vos propres hypothèses.</p>
+        <ul>
+          <li>Paramètres personnalisables</li>
+          <li>Résultat immédiat</li>
+          <li>Graphique d’évolution</li>
+        </ul>
+      </div>
+
+      <form id="compound-form" class="calculator-card">
+        <label>
+          Capital initial
+          <div class="input-wrap">
+            <input id="capital" type="number" min="0" step="100" value="10000">
+            <span>€</span>
+          </div>
+        </label>
+
+        <label>
+          Versement mensuel
+          <div class="input-wrap">
+            <input id="monthly" type="number" min="0" step="10" value="200">
+            <span>€</span>
+          </div>
+        </label>
+
+        <label>
+          Taux annuel
+          <div class="input-wrap">
+            <input id="rate" type="number" min="0" max="30" step="0.1" value="5">
+            <span>%</span>
+          </div>
+        </label>
+
+        <label>
+          Durée
+          <div class="input-wrap">
+            <input id="years" type="number" min="1" max="60" step="1" value="20">
+            <span>ans</span>
+          </div>
+        </label>
+
+        <button type="submit" class="primary-btn full">Calculer</button>
+      </form>
+
+      <div class="result-card" aria-live="polite">
+        <small>Capital final estimé</small>
+        <strong id="future-value">—</strong>
+        <div class="result-grid">
+          <div>
+            <span>Total versé</span>
+            <b id="total-contributed">—</b>
+          </div>
+          <div>
+            <span>Gains estimés</span>
+            <b id="estimated-gains">—</b>
+          </div>
+        </div>
+        <svg id="growth-chart" viewBox="0 0 600 250" role="img" aria-label="Évolution estimée du capital"></svg>
+        <p class="disclaimer">Simulation indicative, hors fiscalité, frais et inflation.</p>
+      </div>
+    </section>
+
+    <section class="section about" id="apropos">
+      <div>
+        <p class="eyebrow">À PROPOS</p>
+        <h2>La finance sans surcharge.</h2>
+      </div>
+      <p>
+        GEST simplifie les calculs financiers du quotidien. L’objectif est de proposer
+        des outils clairs, beaux et compréhensibles, sans jargon inutile.
+      </p>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div>
+      <div class="footer-brand">GEST</div>
+      <p>Des outils simples, précis et gratuits pour reprendre le contrôle de vos finances.</p>
+    </div>
+    <div id="ressources">
+      <strong>Simulateurs</strong>
+      <a href="#interets">Intérêts composés</a>
+      <a href="#simulateurs">Salaire</a>
+      <a href="#simulateurs">Crédit</a>
+      <a href="#simulateurs">Patrimoine</a>
+    </div>
+    <div>
+      <strong>Informations</strong>
+      <a href="#apropos">À propos</a>
+      <a href="#">Méthodologie</a>
+      <a href="#">Mentions légales</a>
+      <a href="#">Confidentialité</a>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <a href="mailto:contact@gest-simulateurs.fr">contact@gest-simulateurs.fr</a>
+    </div>
+    <div class="copyright">© 2026 GEST — Tous droits réservés.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
